@@ -1,0 +1,7 @@
+.patternBG {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  radial-gradient(#444cf7 1.3px, transparent 1.3px), radial-gradient(#444cf7 1.3px, #e5e5f7 1.3px);
+    background-size: 52px 52px;
+    background-position: 0 0,26px 26px;
+};
