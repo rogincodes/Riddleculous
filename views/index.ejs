@@ -1,25 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body class="patternBG">
+<%- include("partials/header.ejs") %>
 
-    <% if (locals.name) { %>
-        <h1><%= name %>, can you take an evil insult for not being able to solve a riddle?</h1>
-        <a href="riddle.ejs"><button>YES</button></a>
-        <a href="goodbye.ejs"><button>NO</button></a>
-    <% } else { %>
-        <h1>It's riddle time!</h1>
-        <form action="/submitName" method="post">
-            <label for="name">Enter your name:</label>
-            <input type="text" name="name">
-            <input type="submit" value="SUBMIT">
-        </form>
-    <% } %>
-    
+	<div class="container">
+		<div class="card">
+			<% if (locals.name) { %>
+				<h1 class="header"><%= name %>, can you take an evil insult for not being able to solve a riddle?</h1>
+				<div>
+					<a href="riddle.ejs"><button class="buttons">YES</button></a>
+					<a href="goodbye.ejs"><button class="buttons">NO</button></a>
+				</div>
+			<% } else { %>
+				<h1 class="header">It's riddle time!</h1>
+				<form action="/submitName" method="post">
+					<label for="name" class="labels">Enter your name:</label><br>
+					<input type="text" name="name" class="inputs"><br>
+					<input type="submit" value="SUBMIT" class="submit">
+				</form>
+			<% } %>
+		</div>
+	</div>
+
 </body>
 </html>

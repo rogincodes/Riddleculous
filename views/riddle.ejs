@@ -1,28 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body class="patternBG">
+<%- include("partials/header.ejs") %>
 
-    <% if (locals.verdict) { %>
-        <h1><%= answer %></h1>
-        <h1><%= verdict %></h1>
-        <h2>Would you like to answer another one?</h2>
-        <a href="riddle.ejs"><button>YES</button></a>
-        <a href="goodbye.ejs"><button>NO</button></a>
-    <% } else { %>  
-        <h1><%= riddle %></h1>    
-        <form action="/submitAnswer" method="post">
-            <label for="answer">Answer:</label>
-            <br>
-            <input type="text" name="answer">
-            <input type="submit" value="SUBMIT">
-        </form>    
-    <% } %>
+	<div class="container">
+		<div class="card">
+			<% if (locals.verdict) { %>
+				<h1><%= answer %></h1>
+				<h2><%= verdict %></h2>
+				<h3>Would you like to answer another one?</h3>
+				<div>
+					<a href="riddle.ejs"><button class="buttons">YES</button></a>
+					<a href="goodbye.ejs"><button class="buttons">NO</button></a>
+				</div>
+			<% } else { %>  
+				<h1 class="header"><%= riddle %></h1>    
+				<form action="/submitAnswer" method="post">
+						<label for="answer" class="labels">Answer: </label>
+						<input type="text" name="answer" class="inputs"><br>
+						<input type="submit" value="SUBMIT" class="submit">
+				</form>    
+			<% } %>
+		</div>
+	</div>
 
 </body>
 </html>

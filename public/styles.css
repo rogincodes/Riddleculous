@@ -1,7 +1,69 @@
+body {
+	font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .patternBG {
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image:  radial-gradient(#444cf7 1.3px, transparent 1.3px), radial-gradient(#444cf7 1.3px, #e5e5f7 1.3px);
-    background-size: 52px 52px;
-    background-position: 0 0,26px 26px;
-};
+	background-color: #fff9f9;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 97vh;
+}
+
+.card {
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
+	background-color: gainsboro;
+	border-radius: 20px;
+}
+
+
+
+.header {
+	margin: 1rem 0;
+}
+
+.labels {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.inputs {
+	font-size: 1.2rem;
+	margin: .5rem 0;
+	padding: .5rem;
+}
+
+.submit {
+	border: none;
+	padding: .8rem;
+	border-radius: 5px;
+	background-color: rgb(44, 167, 44);
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	margin: 8px 0;
+}
+
+.buttons {
+	border: none;
+	padding: .8rem;
+	width: 70px;
+	border-radius: 5px;
+	background-color: rgb(255, 139, 22);
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	margin: 0 15px 15px 0;
+}
