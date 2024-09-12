@@ -44,11 +44,18 @@ app.post("/submitAnswer", async (req, res) => {
 		const result = await axios.get("https://evilinsult.com/generate_insult.php?lang=en&type=json");
 		let userAnswer = req.body.answer.toUpperCase();
 		const upperCasedAnswer = riddleAnswer.toUpperCase();
-		if (upperCasedAnswer.includes(userAnswer)) {
-			res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: "Congratulations on not getting insulted!"});
-		} else {
+		let words = userAnswer.split(" ");
+		let found = words.some(word => upperCasedAnswer.includes(word));
+		
+		if (userAnswer === "") {
 			res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: result.data.insult })
-		}
+		} else {
+			if (found) {
+				res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: "Congratulations on not getting insulted!"});
+			} else {
+				res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: result.data.insult })
+			}
+		}	
 	} catch (error) {
 		console.error("Failed to make request:", error.message);
 		res.render("index.ejs", { riddle: error.message});

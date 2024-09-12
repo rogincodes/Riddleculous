@@ -1,19 +1,31 @@
+html {
+  --s: 300px; /* control the size*/
+  --c1: #ffffff;
+  --c2: #1095c1;
+  
+  --_g: #0000 8%,var(--c1) 0 17%,#0000 0 58%;
+  background: 
+    linear-gradient(135deg,#0000 20.5%,var(--c1) 0 29.5%,#0000 0) 0 calc(var(--s)/4),
+    linear-gradient( 45deg,var(--_g)) calc(var(--s)/2) 0,
+    linear-gradient(135deg,var(--_g),var(--c1) 0 67%,#0000 0),        
+    linear-gradient( 45deg,var(--_g),var(--c1) 0 67%,#0000 0 83%,var(--c1) 0 92%,#0000 0),
+    var(--c2); 
+  background-size: var(--s) var(--s);
+}
+
 body {
 	font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-}
-
-.patternBG {
-	background-color: #fff9f9;
+	margin: 0;
 }
 
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 97vh;
+	height: 91.3vh;
 }
 
 .card {
@@ -23,8 +35,9 @@ body {
 	justify-content: center;
 	text-align: center;
 	padding: 1rem;
-	background-color: gainsboro;
+	background-color: #ffffff;
 	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -66,4 +79,13 @@ body {
 	font-weight: bold;
 	font-size: 1rem;
 	margin: 0 15px 15px 0;
+}
+
+footer {
+  background-color: #1095c1;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1.2rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

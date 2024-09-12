@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="card">
 			<% if (locals.name) { %>
-				<h1 class="header"><%= name %>, can you take an evil insult for not being able to solve a riddle?</h1>
+				<h1 class="header"><%= name %>, are you willing to solve a riddle? I must warn you that if you do not get the answer right, you will receive an evil insult.</h1>
 				<div>
 					<a href="riddle.ejs"><button class="buttons">YES</button></a>
 					<a href="goodbye.ejs"><button class="buttons">NO</button></a>
@@ -19,5 +19,4 @@
 		</div>
 	</div>
 
-</body>
-</html>
+<%- include("partials/footer.ejs") %>
