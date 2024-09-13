@@ -29,55 +29,54 @@ body {
 }
 
 .card {
-	flex-basis: 50%;
+	flex-basis: 75%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	padding: 1rem;
+	padding: .8rem;
 	background-color: #ffffff;
 	border-radius: 20px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .header {
 	margin: 1rem 0;
+	font-size: 1.5rem;
 }
 
 .labels {
 	margin: 0;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-weight: bold;
 }
 
 .inputs {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	margin: .5rem 0;
 	padding: .5rem;
 }
 
 .submit {
 	border: none;
-	padding: .8rem;
+	padding: .6rem;
 	border-radius: 5px;
 	background-color: rgb(44, 167, 44);
 	color: white;
 	font-weight: bold;
-	font-size: 1rem;
+	font-size: .8rem;
 	margin: 8px 0;
 }
 
 .buttons {
 	border: none;
-	padding: .8rem;
+	padding: .6rem;
 	width: 70px;
 	border-radius: 5px;
 	background-color: rgb(255, 139, 22);
 	color: white;
 	font-weight: bold;
-	font-size: 1rem;
+	font-size: .8rem;
 	margin: 0 15px 15px 0;
 }
 
@@ -89,3 +88,70 @@ footer {
   font-size: 1.2rem;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Styles for screens larger than 600px (e.g., tablets) */
+@media (min-width: 600px) {
+	.card {
+		flex-basis: 70%;
+		padding: 1rem;
+	}
+
+	.header {
+		font-size: 1.8rem;
+	}
+
+	.labels {
+		font-size: 1.25rem;
+	}
+
+	.submit {
+		padding: .7rem;
+		font-size: .9rem;
+	}
+
+	.buttons {
+		padding: .7rem;
+		font-size: .9rem;
+	}
+
+	.inputs {
+		font-size: 1.1rem;
+	}
+}
+
+/* Styles for screens larger than 1024px (e.g., desktops) */
+@media (min-width: 1024px) {
+  .card {
+		flex-basis: 60%;
+	}
+
+	.header {
+		font-size: 2.125rem;
+	}
+
+	.labels {
+		font-size: 1.5rem;
+	}
+
+	.submit {
+		padding: .7rem;
+		font-size: .9rem;
+	}
+
+	.buttons {
+		padding: .7rem;
+		font-size: .9rem;
+	}
+
+	.inputs {
+		font-size: 1.2rem;
+	}
+}
+
+/* Styles for screens larger than 1200px (e.g., large laptops and desktops) */
+@media (min-width: 1200px) {
+  .card {
+		flex-basis: 50%;
+	}
+}
+
