@@ -89,6 +89,14 @@ footer {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.green-Text {
+	color: green;
+}
+
+.red-Text {
+	color: rgb(206, 0, 0);
+}
+
 /* Styles for screens larger than 600px (e.g., tablets) */
 @media (min-width: 600px) {
 	.card {
