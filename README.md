@@ -1,8 +1,9 @@
 # RIDDLECULE
 ## Website Link: https://riddlecule.onrender.com
-#### A website where you can answer countless riddles. An evil insult will be received if you answered wrong. I used API's to generate the riddles and evil insults.
+#### A website where you can answer countless riddles. You will get an evil insult if you answered wrong, and a compliment if you get the answer right. I used API's to generate the riddles, evil insults, and compliments.
 #### Riddles: https://riddles-api.vercel.app/random
 #### Evil Insults: https://evilinsult.com/generate_insult.php?lang=en&type=json
+#### Compliments: https://compliments-api.onrender.com/ (I made this API.)
 #### CSS Background: https://css-pattern.com/
 #### Hosting Site: https://render.com/
 
