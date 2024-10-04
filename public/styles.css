@@ -97,6 +97,17 @@ footer {
 	color: rgb(206, 0, 0);
 }
 
+.score {
+	font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 1rem;
+}
+
+.final-Score {
+	margin-bottom: 0;
+}
+
 /* Styles for screens larger than 600px (e.g., tablets) */
 @media (min-width: 600px) {
 	.card {
@@ -124,6 +135,10 @@ footer {
 
 	.inputs {
 		font-size: 1.1rem;
+	}
+
+	.score {
+		font-size: 1.25rem;
 	}
 }
 
@@ -153,6 +168,10 @@ footer {
 
 	.inputs {
 		font-size: 1.2rem;
+	}
+
+	.score {
+		font-size: 1.5rem;
 	}
 }
 

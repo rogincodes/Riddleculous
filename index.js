@@ -10,8 +10,13 @@ var riddleAnswer = "";
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+let insultsCounter = 0;
+let complimentsCounter = 0;
+
 // GET index.ejs
 app.get("/", (req, res) => {
+	insultsCounter = 0;
+	complimentsCounter = 0;
 	res.render("index.ejs");
 });
 
@@ -41,7 +46,7 @@ app.get("/riddle.ejs", async (req, res) => {
 
 // GET goodbye.ejs
 app.get("/goodbye.ejs", (req, res) => {
-  res.render("goodbye.ejs");
+  res.render("goodbye.ejs", { insCounter: insultsCounter, compCounter: complimentsCounter });
 });
 
 // POST submit answer
@@ -56,12 +61,15 @@ app.post("/submitAnswer", async (req, res) => {
 		
 		// check answer		
 		if (userAnswer === "") {
-			res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: result.data.insult })
+			insultsCounter++;
+			res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: insultAPI.data.insult, textColor: "red-Text", insCounter: insultsCounter, compCounter: complimentsCounter })
 		} else {
 			if (found) {
-				res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: complimentAPI.data.compliment, textColor: "green-Text" });
+				complimentsCounter++;
+				res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: complimentAPI.data.compliment, textColor: "green-Text", insCounter: insultsCounter, compCounter: complimentsCounter });
 			} else {
-				res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: insultAPI.data.insult, textColor: "red-Text" });
+				insultsCounter++;
+				res.render("riddle.ejs", { answer: `The correct answer is "${riddleAnswer}".`, verdict: insultAPI.data.insult, textColor: "red-Text", insCounter: insultsCounter, compCounter: complimentsCounter });
 			}
 		}	
 	} catch (error) {
