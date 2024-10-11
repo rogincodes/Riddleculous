@@ -3,9 +3,9 @@
 	<div class="container">
 		<div class="card">
 			<% if (locals.verdict) { %>
-				<h2><%= answer %></h2>
-				<h1 class="<%= textColor %>"><%= verdict %></h1>
-				<h2>Would you like to answer another one?</h2>
+				<h2 class="sub-head"><%= answer %></h2>
+				<h1 class="header <%= textColor %>"><%= verdict %></h1>
+				<h2 class="sub-head">Would you like to answer another one?</h2>
 				<div>
 					<a href="riddle.ejs"><button class="buttons">YES</button></a>
 					<a href="goodbye.ejs"><button class="buttons">NO</button></a>

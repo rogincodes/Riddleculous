@@ -42,41 +42,45 @@ body {
 
 .header {
 	margin: 1rem 0;
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 }
 
 .labels {
 	margin: 0;
-	font-size: 1rem;
+	font-size: .7rem;
 	font-weight: bold;
 }
 
 .inputs {
-	font-size: 1rem;
+	font-size: .6rem;
 	margin: .5rem 0;
 	padding: .5rem;
 }
 
+.sub-head {
+	font-size: .8rem;
+}
+
 .submit {
 	border: none;
-	padding: .6rem;
+	padding: .5rem;
 	border-radius: 5px;
 	background-color: rgb(44, 167, 44);
 	color: white;
 	font-weight: bold;
-	font-size: .8rem;
+	font-size: .7rem;
 	margin: 8px 0;
 }
 
 .buttons {
 	border: none;
-	padding: .6rem;
+	padding: .5rem;
 	width: 70px;
 	border-radius: 5px;
 	background-color: rgb(255, 139, 22);
 	color: white;
 	font-weight: bold;
-	font-size: .8rem;
+	font-size: .7rem;
 	margin: 0 15px 15px 0;
 }
 
@@ -101,7 +105,7 @@ footer {
 	font-family: "Protest Strike", sans-serif;
   font-weight: 400;
   font-style: normal;
-	font-size: 1rem;
+	font-size: .8rem;
 }
 
 .final-Score {
@@ -116,11 +120,15 @@ footer {
 	}
 
 	.header {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 	}
 
 	.labels {
-		font-size: 1.25rem;
+		font-size: 1rem;
+	}
+
+	.sub-head {
+		font-size: 1rem;
 	}
 
 	.submit {
@@ -134,11 +142,11 @@ footer {
 	}
 
 	.inputs {
-		font-size: 1.1rem;
+		font-size: .8rem;
 	}
 
 	.score {
-		font-size: 1.25rem;
+		font-size: 1rem;
 	}
 }
 
@@ -154,6 +162,10 @@ footer {
 
 	.labels {
 		font-size: 1.5rem;
+	}
+
+	.sub-head {
+		font-size: 1.6rem;
 	}
 
 	.submit {
