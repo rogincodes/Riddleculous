@@ -53,7 +53,7 @@ app.get("/goodbye.ejs", (req, res) => {
 app.post("/submitAnswer", async (req, res) => {
 	try {
 		const insultAPI = await axios.get("https://evilinsult.com/generate_insult.php?lang=en&type=json");
-		const complimentAPI = await axios.get("https://compliments-api.onrender.com/random")
+		const complimentAPI = await axios.get("https://compliments-api.vercel.app/random")
 		let userAnswer = req.body.answer.toUpperCase();
 		const upperCasedAnswer = riddleAnswer.toUpperCase();
 		let words = userAnswer.split(" ");
