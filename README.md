@@ -2,7 +2,7 @@
 
 **A fun way to answer riddles.** You will get an evil insult if you answered wrong, and a compliment if you get the answer right. I used APIs to fetch riddles, evil insults, and compliments. Score is shown after quitting.
 
-🔗 **[Visit Riddleculous](https://riddlecule.onrender.com)**
+🔗 **[Visit Riddleculous](https://riddleculous.onrender.com)**
 
 > **Note**: The website is hosted on a free plan, so it may take up to 50 seconds to load the first time as the server may be in a sleep state.
 
