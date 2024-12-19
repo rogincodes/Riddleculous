@@ -54,10 +54,12 @@ app.post("/submitAnswer", async (req, res) => {
 	try {
 		const insultAPI = await axios.get("https://evilinsult.com/generate_insult.php?lang=en&type=json");
 		const complimentAPI = await axios.get("https://compliments-api.vercel.app/random")
-		let userAnswer = req.body.answer.toUpperCase();
-		const upperCasedAnswer = riddleAnswer.toUpperCase();
-		let words = userAnswer.split(" ");
-		let found = words.some(word => upperCasedAnswer.includes(word));
+		let userAnswer = req.body.answer.toLowerCase();
+		const correctAnswer = riddleAnswer.toLowerCase();
+		let commonWords = ["i", "he", "she", "a", "the", "is", "it", "its", "it's", "will", "not", "in", "on", "to"];
+		let filteredAnswer = userAnswer.split(" ").filter(word => !commonWords.includes(word)).join(" ");
+		let finalAnswer = filteredAnswer.split(" ");
+		let found = finalAnswer.some(word => correctAnswer.includes(word));
 		
 		// check answer		
 		if (userAnswer === "") {

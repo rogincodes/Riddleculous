@@ -19,6 +19,14 @@ body {
   font-weight: 500;
   font-style: normal;
 	margin: 0;
+	font-size: 14px;
+	color: #333;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .container {
@@ -35,7 +43,7 @@ body {
 	justify-content: center;
 	text-align: center;
 	padding: .8rem;
-	background-color: #ffffff;
+	background-color: #FFFAFA;
 	border-radius: 20px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -47,12 +55,12 @@ body {
 
 .labels {
 	margin: 0;
-	font-size: .7rem;
+	font-size: 12px;
 	font-weight: bold;
 }
 
 .inputs {
-	font-size: .6rem;
+	font-size: 12px;
 	margin: .5rem 0;
 	padding: .5rem;
 }
@@ -69,28 +77,43 @@ body {
 	color: white;
 	font-weight: bold;
 	font-size: .7rem;
-	margin: 8px 0;
+	margin: 8px 0 0 0;
+	cursor: pointer;
+	width: 70px;
+}
+
+.submit:hover {
+	background-color: rgb(48, 182, 48);
 }
 
 .buttons {
 	border: none;
 	padding: .5rem;
-	width: 70px;
+	width: 60px;
 	border-radius: 5px;
-	background-color: rgb(255, 139, 22);
+	background-color: #008DDA;
 	color: white;
 	font-weight: bold;
 	font-size: .7rem;
-	margin: 0 15px 15px 0;
+	margin: 0 0 15px 0;
+	cursor: pointer;
+}
+
+.buttons:hover {
+	background-color: #0398e7;
 }
 
 footer {
+	position: fixed;
+	bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #1095c1;
   color: #fff;
   text-align: center;
   padding: 1em 0;
   font-size: 1.2rem;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .green-Text {
@@ -106,6 +129,7 @@ footer {
   font-weight: 400;
   font-style: normal;
 	font-size: .8rem;
+	color: #008DDA;
 }
 
 .final-Score {
@@ -134,15 +158,17 @@ footer {
 	.submit {
 		padding: .7rem;
 		font-size: .9rem;
+		width: 90px;
 	}
 
 	.buttons {
 		padding: .7rem;
 		font-size: .9rem;
+		width: 80px;
 	}
 
 	.inputs {
-		font-size: .8rem;
+		font-size: 1rem;
 	}
 
 	.score {
@@ -171,11 +197,13 @@ footer {
 	.submit {
 		padding: .8rem;
 		font-size: 1rem;
+		width: 100px;
 	}
 
 	.buttons {
 		padding: .8rem;
 		font-size: 1rem;
+		width: 90px;
 	}
 
 	.inputs {
